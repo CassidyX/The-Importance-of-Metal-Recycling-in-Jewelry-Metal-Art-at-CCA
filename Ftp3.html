@@ -11,7 +11,7 @@ font-family: Verdana, sans-serif;
     padding: 0;
     background-color: #341f0b; /* Background color */
     color: white;
-    font-size: clamp(12px); /* Minimum size, preferred size, maximum size */
+    font-size: clamp(12vw); /* Minimum size, preferred size, maximum size */
 
     
 }
@@ -20,13 +20,13 @@ font-family: Verdana, sans-serif;
 a {
     color: #de1e25;
     text-decoration: none;
-    font-size: clamp(12px); /* Minimum size, preferred size, maximum size */
+    font-size: clamp(12vw); /* Minimum size, preferred size, maximum size */
 }
 
 a:hover {
     color: #FFFA6F;
     text-decoration: underline;
-    font-size: clamp(12px); /* Minimum size, preferred size, maximum size */
+    font-size: clamp(12vw); /* Minimum size, preferred size, maximum size */
 }
 
 .video-content, .environment-image, .phone-image, .additional-image {
@@ -34,27 +34,27 @@ a:hover {
     max-width: 100%;
     height: auto;
     margin: 20px auto;
-    font-size: clamp(12px); /* Minimum size, preferred size, maximum size */
+    font-size: clamp(12vw); /* Minimum size, preferred size, maximum size */
 }
 
 .iframe-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding:clamp(20px)
+    padding:clamp(12vw)
     gap:clamp(10px)
-    font-size: clamp(12px); /* Minimum size, preferred size, maximum size */
+    font-size: clamp(12vw); /* Minimum size, preferred size, maximum size */
 }
 
 iframe {
     flex: 1 1 90%; /* Start with a base size, adjust the percentage as needed */
-    max-width:clamp(300px);
-    height: clamp(100px);
-    font-size: clamp(12px); /* Minimum size, preferred size, maximum size */
+    max-width:clamp(300vw);
+    height: clamp(100vw);
+    font-size: clamp(12vw); /* Minimum size, preferred size, maximum size */
 }
-      @media (min-width: 600px) {
+      @media (min-width: 600vw) {
           iframe {
-              flex: 0 1 calc(33.333% - 20px); /* Adjust for 3 per row on wider screens */
+              flex: 0 1 calc(33.333% - 20vw); /* Adjust for 3 per row on wider screens */
           }
       }
       
