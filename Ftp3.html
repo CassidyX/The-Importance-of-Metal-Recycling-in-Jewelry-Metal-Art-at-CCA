@@ -5,153 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Environmental Impact</title>
   <style>
-body {
-font-family: Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #341f0b; /* Background color */
-    color: white;
-    font-size: clamp(300rem); /* Minimum size, preferred size, maximum size */
-
-    
-}
-
-
-a {
-    color: #de1e25;
-    text-decoration: none;
-    font-size: clamp(12rem); /* Minimum size, preferred size, maximum size */
-}
-
-a:hover {
-    color: #FFFA6F;
-    text-decoration: underline;
-    font-size: clamp(12rem); /* Minimum size, preferred size, maximum size */
-}
-
-.video-content, .environment-image, .phone-image, .additional-image {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 20px auto;
-    font-size: clamp(12rem); /* Minimum size, preferred size, maximum size */
-}
-
-.iframe-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding:clamp(12rem)
-    gap:clamp(10rem)
-    font-size: clamp(12rem); /* Minimum size, preferred size, maximum size */
-}
-
-iframe {
-    flex: 1 1 90%; /* Start with a base size, adjust the percentage as needed */
-    max-width:clamp(300rem);
-    height: clamp(100rem);
-    font-size: clamp(12rem); /* Minimum size, preferred size, maximum size */
-}
-      @media (min-width: 600rem) {
-          iframe {
-              flex: 0 1 calc(33.333% - 20rem); /* Adjust for 3 per row on wider screens */
-          }
-      }
-      
-      .description, .page-title, .Map, .gram, .metaluse, .chart, .interview, .h2, .h3, .h6, .info {
-    text-align: center;
-    margin: 20rem;
-    color: #FFFA6F;
-    font-family: Verdana, sans-serif;
-    font-size: clamp(12rem); /* Minimum size, preferred size, maximum size */
-}
-
-.description p, .info {
-    padding: 0 5%; /* Use percentage for padding */
-    color: #ffffff;
-    font-size: clamp(12rem); /* Minimum size, preferred size, maximum size */
-}
-      .environment-image {
-          display: block; /* Block display to force new line */
-          max-width: 100%; /* Max width to contain the image within the viewport */
-          height: auto; /* Height auto for maintaining aspect ratio */
-          margin:clamp(20rem); /* Center the image and add margin to the bottom */
-          width: clamp(100rem);
-    height: auto;      }
-      .phone-image {
-        display: block; /* Block display to force new line */
-        max-width: 100%; /* Max width to contain the image within the viewport */
-        height: auto; /* Height auto for maintaining aspect ratio */
-        margin: clamp(10); /* Remove margins to extend to the edge */
-        width: clamp(100rem);
-    height: auto;
+  body {
+      font-family: 'Verdana', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #341f0b;
+      color: white;
+      font-size: 16px; /* Use fixed base font size and adjust with media queries */
     }
-    .environment-image {
-          display: block; /* Block display to force new line */
-          max-width: 100%; /* Max width to contain the image within the viewport */
-          height: auto; /* Height auto for maintaining aspect ratio */
-          margin: clamp(20rem); /* Center the image and add margin to the bottom */
-          width: clamp(100%);
-    height: auto;
-      }
-      .additional-image{padding: clamp(50 -10rem); /* Adds padding to the left and right */
-        width: clamp(100%);
-    height: auto;
 
-      }
-      .phone-image, .additional-image {
-          display: block; /* Block display to force new line */
-          max-width: 100%; /* Max width to contain the image within the viewport */
-          height: auto; /* Height auto for maintaining aspect ratio */
-          margin: clamp(20px); /* Center the image and add margin to the top and bottom */
-          width: clamp(100%);
-    height: auto;
-        }
-      .h6{color: #FFFA6F; /* Changes paragraph color */
-          font-family: Verdana, sans-serif;
-           font-size: clamp(12rem); /* Minimum size, preferred size, maximum size */
- }
-      .h3{
-        color: #ffffff; /* Changes paragraph color */
-          font-family: Verdana, sans-serif;
-              font-size: clamp(12rem); /* Minimum size, preferred size, maximum size */
-}  
+    a {
+      color: #de1e25;
+      text-decoration: none;
+    }
 
-          .additional-image {
-          display: block; /* Block display to force new line */
-          max-width: 100%; /* Max width to contain the image within the viewport */
-          height: auto; /* Height auto for maintaining aspect ratio */
-          margin: auto; /* Center the image horizontally with no top margin */
-          width: clamp(100%);
-    height: auto;
-        }
-      .h2{color: #FFFA6F; /* Changes paragraph color */
-          font-family: Verdana, sans-serif;
-              font-size: clamp(12rem); /* Minimum size, preferred size, maximum size */
-; }
-      .info{color: #ffffff; /* Changes paragraph color */
-          font-family: Verdana, sans-serif;
-             font-size: clamp(12rem); /* Minimum size, preferred size, maximum size */
-; }
+    a:hover {
+      color: #FFFA6F;
+      text-decoration: underline;
+    }
+
+    .iframe-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    iframe {
+      flex: 1 1 90%; /* Start with a base size, adjust the percentage as needed */
+      max-width: 500px;
+      height: 300px; /* Adjust height based on content */
+    }
+
+    /* Media query for large screens such as TVs */
+    @media (min-width: 1024px) {
+      iframe {
+        flex: 0 1 calc(33.333% - 20px); /* Adjust for 3 per row on wider screens */
+        height: 450px; /* Larger height for larger displays */
+      }
+
+      body {
+        font-size: 20px; /* Larger base font size for better readability on TVs */
+      }
+    }
+
+    .description, .page-title {
+      text-align: center;
+      margin: 20px 0;
+      color: #FFFA6F;
+    }
+
+    .description p, .info {
+      padding: 0 5%;
+      color: #ffffff;
+    }
+
+    img, video {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 20px auto;
+    }
   </style>
 </head>
 <body>
   
   <h1 class="page-title">The Importance of Metal Recycling in Jewelry Metal Art at CCA</h1>
-    <div class="iframe-container">
-        <!-- Your iframes here -->
-
-          <iframe title="Tons of resources mined from Earth" src="https://www.theworldcounts.com/embeds/counters/16?background_color=white&color=black&font_family='Helvetica Neue', Arial, sans-serif&font_size=13" style="border: none"></iframe>
-          <iframe title="Tons of resources extracted from Earth" src="https://www.theworldcounts.com/embeds/counters/5?background_color=white&color=black&font_family='Helvetica Neue', Arial, sans-serif&font_size=13" style="border: none"></iframe>
-          <iframe title="Energy use from mining" src="https://www.theworldcounts.com/embeds/counters/32?background_color=white&color=black&font_family='Helvetica Neue', Arial, sans-serif&font_size=13" style="border: none"></iframe>
-          <iframe title="Tons of melted ice" src="https://www.theworldcounts.com/embeds/counters/22?background_color=white&color=black&font_family='Helvetica Neue', Arial, sans-serif&font_size=13" style="border: none"></iframe>
-          <iframe title="Tons of toxic waste produced from gold mining" src="https://www.theworldcounts.com/embeds/counters/26?background_color=white&color=black&font_family='Helvetica Neue', Arial, sans-serif&font_size=13" style="border: none"></iframe>
-          <iframe title="Tons of gold mined" src="https://www.theworldcounts.com/embeds/counters/17?background_color=white&color=black&font_family='Helvetica Neue', Arial, sans-serif&font_size=13" style="border: none"></iframe>
-          <iframe title="Tons of coal mined" src="https://www.theworldcounts.com/embeds/counters/60?background_color=white&color=black&font_family='Helvetica Neue', Arial, sans-serif&font_size=13" style="border: none"></iframe>
-          <iframe title="Tons of steel recycled" src="https://www.theworldcounts.com/embeds/counters/54?background_color=white&color=black&font_family='Helvetica Neue', Arial, sans-serif&font_size=13" style="border: none"></iframe>
-          <iframe title="Tons of wastewater from steel mining" src="https://www.theworldcounts.com/embeds/counters/58?background_color=white&color=black&font_family='Helvetica Neue', Arial, sans-serif&font_size=13" style="border: none"></iframe>
-          <iframe title='Tons of steel produced' src='https://www.theworldcounts.com/embeds/counters/62?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=13' style='border: none' height='100' width='300'></iframe>          <iframe title="Percent of species in critical risk of extinction" src="https://www.theworldcounts.com/embeds/counters/66?background_color=white&color=black&font_family='Helvetica Neue', Arial, sans-serif&font_size=13" style="border: none"></iframe>
-      </div>
+  <div class="iframe-container">
+    <!-- Your iframes here -->
+    <iframe title="Tons of resources mined from Earth" src="https://www.theworldcounts.com/embeds/counters/16?background_color=white&color=black&font_family='Helvetica Neue', Arial, sans-serif&font_size=13" style="border: none;"></iframe>
+    <!-- Add additional iframes as needed -->
+  </div>
+  <div class="description">
+    <p>Have you thrown away any metals? Did you throw to the right place? One small piece you throw might not be much. However, if every person thinks like what you think, this world will be in trouble. Now the earth is in a lot of trouble, scroll down to see more.</p>
+  </div>
       <div class="description">
         <p>Have you thrown away any metals? Did you throw to the right place? One small piece you throw might not be much. However, if every person thinks like what you think, this world will be in trouble. Now the earth is in a lot of trouble, scroll down to see more.</p>
         <!-- <h3>What can the average person do to make a significant contribution to metal recycling efforts?</h3>
