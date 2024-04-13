@@ -48,11 +48,11 @@ a:hover {
 
 iframe {
     flex: 1 1 90%; /* Start with a base size, adjust the percentage as needed */
-    max-width:clamp(300vw);
-    height: clamp(100vw);
-    font-size: clamp(12vw); /* Minimum size, preferred size, maximum size */
+    max-width:clamp(300rem);
+    height: clamp(100rem);
+    font-size: clamp(12rem); /* Minimum size, preferred size, maximum size */
 }
-      @media (min-width: 600vw) {
+      @media (min-width: 600rem) {
           iframe {
               flex: 0 1 calc(33.333% - 20vw); /* Adjust for 3 per row on wider screens */
           }
